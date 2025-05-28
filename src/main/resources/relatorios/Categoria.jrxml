@@ -1,0 +1,76 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="Categoria" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0299eac-6c4d-4bed-ae8a-8c0959011b75" titleNewPage="true">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<parameter name="nomeEmpresa" class="java.lang.String"/>
+	<parameter name="ramoDaEmpresa" class="java.lang.String"/>
+	<parameter name="nomeDoSistema" class="java.lang.String"/>
+	<parameter name="moduloDoSistema" class="java.lang.String"/>
+	<parameter name="nomeRelatorio" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="nome" class="java.lang.String"/>
+	<field name="id" class="java.lang.Long"/>
+	<pageHeader height="69" splitType="Stretch">
+		<element kind="image" uuid="3c54b2c8-c5de-4063-aa53-fb31f1c53acb" x="480" y="0" width="70" height="60">
+			<expression><![CDATA[getClass().getResourceAsStream("/relatorios/fontes/logo.png")]]></expression>
+		</element>
+		<element kind="image" uuid="83e163c4-f6db-4e4c-a2e7-d9b1ede815b2" x="10" y="0" width="70" height="60">
+			<expression><![CDATA[getClass().getResourceAsStream("/relatorios/fontes/logo01.png")]]></expression>
+		</element>
+		<element kind="textField" uuid="4ee9cb70-00e8-495a-a912-0dc0234c3ada" x="80" y="0" width="400" height="15" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Top">
+			<expression><![CDATA[$P{nomeEmpresa}
+]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="a940305d-a139-4508-94d4-c747e7d18883" x="80" y="15" width="400" height="15" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Top">
+			<expression><![CDATA[$P{ramoDaEmpresa}
+]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="83cac4f3-6504-42b1-9db3-ebb576c136c6" x="80" y="30" width="400" height="15" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Top">
+			<expression><![CDATA[$P{nomeDoSistema} + " - " + $P{moduloDoSistema}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="bf622947-bbbb-4107-8348-7b766bf1314f" x="80" y="45" width="400" height="15" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Top">
+			<expression><![CDATA["Relatório de " + $P{nomeRelatorio}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</pageHeader>
+	<columnHeader height="31" splitType="Stretch">
+		<element kind="staticText" uuid="31ab9345-1380-4b48-a0c2-0b2492003e22" mode="Opaque" x="0" y="10" width="250" height="20" forecolor="#000000" backcolor="#B3B3B3" fontName="SansSerif" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Id]]></text>
+			<box>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="94dcb607-a6fd-4b99-8d8e-9197edc593a9" mode="Opaque" x="250" y="10" width="304" height="20" forecolor="#030303" backcolor="#B3B3B3" fontName="SansSerif" fontSize="12.0" pdfFontName="Helvetica-Bold" pdfEmbedded="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Nome]]></text>
+			<box>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<element kind="textField" uuid="d98476a8-da43-4003-af0c-9e30e8d2c90c" x="0" y="4" width="250" height="20" fontName="SansSerif" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{id}]]></expression>
+			</element>
+			<element kind="textField" uuid="7b41d500-5483-4c63-af5b-6abf93afd496" x="250" y="4" width="304" height="20" fontName="SansSerif" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{nome}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="29" splitType="Stretch">
+		<element kind="textField" uuid="334bc068-da50-4fee-a2f8-f2ac02b1669a" x="360" y="8" width="100" height="20" fontName="SansSerif" fontSize="6.0" hTextAlign="Right">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="993d1b50-fd73-48ec-8a08-f2f606f971e7" x="460" y="8" width="100" height="20" fontName="SansSerif" fontSize="6.0" evaluationTime="Report" hTextAlign="Left">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+</jasperReport>
