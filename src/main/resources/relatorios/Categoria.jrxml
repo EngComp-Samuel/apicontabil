@@ -65,12 +65,15 @@
 			</element>
 		</band>
 	</detail>
-	<pageFooter height="29" splitType="Stretch">
-		<element kind="textField" uuid="334bc068-da50-4fee-a2f8-f2ac02b1669a" x="360" y="8" width="100" height="20" fontName="SansSerif" fontSize="6.0" hTextAlign="Right">
+	<pageFooter height="23" splitType="Stretch">
+		<element kind="textField" uuid="334bc068-da50-4fee-a2f8-f2ac02b1669a" x="361" y="10" width="100" height="10" fontName="SansSerif" fontSize="6.0" hTextAlign="Right" vTextAlign="Bottom">
 			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
 		</element>
-		<element kind="textField" uuid="993d1b50-fd73-48ec-8a08-f2f606f971e7" x="460" y="8" width="100" height="20" fontName="SansSerif" fontSize="6.0" evaluationTime="Report" hTextAlign="Left">
+		<element kind="textField" uuid="993d1b50-fd73-48ec-8a08-f2f606f971e7" x="461" y="10" width="94" height="10" fontName="SansSerif" fontSize="6.0" evaluationTime="Report" hTextAlign="Left" vTextAlign="Bottom">
 			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="line" uuid="a32a2792-bf5b-407a-9838-a2c491e5564e" x="2" y="7" width="553" height="1">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
 	</pageFooter>
 </jasperReport>
