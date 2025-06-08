@@ -1,4 +1,4 @@
-package com.apicontabil.apicontabil.controlefinanceiro.infra.relatorios;
+package com.apicontabil.apicontabil.controlefinanceiro.app.exception;
 
 public class ReportsException extends RuntimeException{
 

@@ -3,7 +3,7 @@ package com.apicontabil.apicontabil.controlefinanceiro.ui.controller.estatistica
 
 import com.apicontabil.apicontabil.controlefinanceiro.domain.modelo.CategoriaEntity;
 import com.apicontabil.apicontabil.controlefinanceiro.domain.repository.CategoriaJpaRepository;
-import com.apicontabil.apicontabil.controlefinanceiro.infra.relatorios.CategoriaReports;
+import com.apicontabil.apicontabil.controlefinanceiro.app.service.relatorios.CategoriaReports;
 import com.apicontabil.apicontabil.controlefinanceiro.infra.relatorios.CategoriaReportsPdf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

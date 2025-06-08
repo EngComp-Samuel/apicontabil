@@ -1,5 +1,7 @@
 package com.apicontabil.apicontabil.controlefinanceiro.infra.relatorios;
 
+import com.apicontabil.apicontabil.controlefinanceiro.app.exception.ReportsException;
+import com.apicontabil.apicontabil.controlefinanceiro.app.service.relatorios.CategoriaReports;
 import com.apicontabil.apicontabil.controlefinanceiro.domain.modelo.CategoriaEntity;
 import com.apicontabil.apicontabil.controlefinanceiro.domain.repository.CategoriaJpaRepository;
 import net.sf.jasperreports.engine.JasperExportManager;
@@ -14,7 +16,7 @@ import java.util.List;
 import java.util.Locale;
 
 @Service
-public class CategoriaReportsPdf implements CategoriaReports{
+public class CategoriaReportsPdf implements CategoriaReports {
 
     private static final String CAMINHO_RELATORIO_CATEGORIA = "/relatorios/Categoria.jasper";
 

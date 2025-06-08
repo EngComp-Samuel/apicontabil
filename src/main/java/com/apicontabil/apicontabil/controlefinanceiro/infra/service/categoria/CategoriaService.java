@@ -51,6 +51,7 @@ public class CategoriaService implements CategoriaServiceUseCase {
 
 	public void removerCategoria(Long id){
 		try{
+			CategoriaEntity categoriaEntity = buscarCategoriaPorId(id);
 			categoriaJpaRepository.deleteById(id);
 		} catch (EmptyResultDataAccessException e) {
 			throw new ApiContabilException("Não existe dados com esse codigo: " + id);

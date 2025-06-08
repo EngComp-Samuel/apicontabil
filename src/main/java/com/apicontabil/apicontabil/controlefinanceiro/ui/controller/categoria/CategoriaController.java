@@ -45,7 +45,7 @@ public class CategoriaController {
 	}
 
 	//ok
-	@GetMapping
+	/*@GetMapping
 	public List<CategoriaDTO> listarCategorias(){
 
 		List<CategoriaEntity> categoriaEntities = categoriaService.listarCategorias();
@@ -54,7 +54,18 @@ public class CategoriaController {
 			categorias.add(categoriaMapper.toDTO(c));
 		}
 		return categorias;
+	}*/
+	@GetMapping
+	public List<CategoriaEntity> listarCategorias(){
+
+		List<CategoriaEntity> categoriaEntities = categoriaService.listarCategorias();
+		/*List<CategoriaDTO> categorias = new ArrayList<>();
+		for(CategoriaEntity c: categoriaEntities){
+			categorias.add(categoriaMapper.toDTO(c));
+		}*/
+		return categoriaEntities;
 	}
+
 
 	//ok
 	@GetMapping(value = "/{categoriaId}")
